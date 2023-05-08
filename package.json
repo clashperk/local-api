@@ -1,0 +1,35 @@
+{
+  "name": "clash-of-clans-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "tsc",
+    "start": "node -r dotenv/config --enable-source-maps dist/index.js",
+    "test": "eslint --ext .ts --ignore-path .gitignore .",
+    "lint": "eslint --fix --ext .ts --ignore-path .gitignore .",
+    "dev": "node -r dotenv/config --enable-source-maps dist/index.js"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-http-proxy": "^1.6.3",
+    "lodash": "^4.17.21",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.9"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.13",
+    "@types/express-http-proxy": "^1.6.3",
+    "@types/morgan": "^1.9.4",
+    "@types/node": "^18.16.3",
+    "rimraf": "^5.0.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  }
+}
