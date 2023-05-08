@@ -10,7 +10,7 @@ services:
     environment:
       - PORT=6060
     ports:
-      - 8080:8080
+      - 7070:8080
     hostname: node_01
 
   node_02:
