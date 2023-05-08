@@ -2,6 +2,7 @@ version: '3.6'
 
 services:
   node_01:
+    image: 432159388664.dkr.ecr.us-east-1.amazonaws.com/local-api:latest
     container_name: node_01
     restart: always
     env_file:
@@ -13,12 +14,13 @@ services:
     hostname: node_01
 
   node_02:
+    image: 432159388664.dkr.ecr.us-east-1.amazonaws.com/local-api:latest
     container_name: node_02
     restart: always
     env_file:
       - .env
     environment:
-      - PORT=6060
+      - PORT=8080
     ports:
       - 9090:8080
     hostname: node_02
@@ -32,7 +34,6 @@ services:
     ports:
       - 443:443
       - 80:80
-      - 8080:8080
     depends_on:
       - node_01
       - node_02
