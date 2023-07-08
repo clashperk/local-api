@@ -8,8 +8,8 @@ on:
 
 jobs:
   build:
-    name: ECR
-    runs-on: ubuntu-latest
+    name: AWS ECR
+    runs-on: buildjet-4vcpu-ubuntu-2204-arm
 
     steps:
       - name: Checkout
