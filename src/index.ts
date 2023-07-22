@@ -21,9 +21,9 @@ app.use(cors());
 app.use(morgan('dev'));
 
 app.use(proxy('https://api.clashofclans.com', {
-  filter(req, res) {
-    return req.method == 'GET';
-  },
+  // filter(req, res) {
+  //   return req.method === 'GET';
+  // },
   proxyReqPathResolver(req) {
     return url.parse(req.url).path!;
   },
