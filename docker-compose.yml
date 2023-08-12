@@ -12,6 +12,7 @@ services:
     ports:
       - 7070:8080
     hostname: node_01
+    mem_limit: 1g
 
   node_02:
     image: 432159388664.dkr.ecr.us-east-1.amazonaws.com/local-api:latest
@@ -24,6 +25,7 @@ services:
     ports:
       - 9090:8080
     hostname: node_02
+    mem_limit: 1g
 
   # nginx:
   #   image: nginx:latest
